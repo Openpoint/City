@@ -1,0 +1,58 @@
+.templateid {
+	display:none;
+	color:red;
+}
+
+dm-chapter-deep,dm-chapter,dm-verse{
+	overflow:hidden;
+    -webkit-transition: .6s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    -webkit-transition-property: max-height;
+    -moz-transition: .6s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    -moz-transition-property: max-height;
+    transition: .6s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition-delay: inherit;
+    transition-timing-function: inherit;
+    transition-property: max-height;
+}
+dm-chapter-title,dm-verse-title{
+	cursor:pointer;
+	text-transform:uppercase;
+}
+dm-sidemen h1, dm-sidemen h2{
+	margin:0;
+	color:white;
+}
+dm-sidemen h1:hover, dm-sidemen h2:hover, dm-sidemen .open h1{
+	opacity:.85;
+}
+dm-sidemen a{
+	text-decoration:none;
+	color:#f5f5f5;
+}
+dm-verse-title{
+	text-transform:capitalize;
+}
+.state{
+	transition: .5s ease-in-out;
+}
+.copen .state, .vopen .state{
+		transform: rotate(180deg);
+
+}
+.copen dm-chapter-title .state, .vopen dm-verse-title .state{
+		color:white!important;	
+}
+.cclosed .state, .vclosed .state{
+		transform: rotate(0deg);
+}
+
+#main .wrapper{
+	max-width:800px;
+	margin-left:40px;
+}
+.docgroup{
+	margin-bottom:20px;
+}
+.docgroup h4, .docgroup h3{
+	margin:0;
+}

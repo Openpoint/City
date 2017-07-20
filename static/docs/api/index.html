@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='doc'>
+<head>
+	<base href="/help/" >
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+	<script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/scripts/prettify/prettify.js"></script>
+    <script src="/scripts/prettify/lang-css.js"></script>
+    <script src="/angular/angular.min.js"></script>
+    <script src="/angular-route/angular-route.min.js"></script>
+	<script src="/angular-aria/angular-aria.js"></script>
+	<script src="/angular-animate/angular-animate.js"></script>
+	<script src="/angular-material/angular-material.min.js"> </script>
+	<script src="/system/docomatix/docomatix.js"></script>
+	<script src="/scripts/documents.js"> </script>
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="/styles/prettify-tomorrow.css">
+    <!-- <link type="text/css" rel="stylesheet" href="/styles/jsdoc-default.css"> -->
+    <link type="text/css" rel="stylesheet" href="/angular-material/angular-material.min.css">
+    <link type="text/css" rel="stylesheet" href="/styles/docs.css">
+    <link type="text/css" rel="stylesheet" href="/system/docomatix/docomatix.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body ng-controller='main' layout layout-fill prettyprint>
+	<md-sidenav class="md-sidenav-left md-whiteframe-8dp" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+		<md-toolbar class="md-primary md-whiteframe-1dp" layout-align='center center'>
+			<a href="./">Home</a>
+		</md-toolbar>
+		<md-content role="navigation" layout="column" flex>
+			<dm-sidemen flex style="background:{{color.primary.default}};overflow-x:hidden">
+				
+				<dm-item-wrapper>
+					<dm-chapter-title>server</dm-chapter-title>
+					<dm-chapter-deep>
+						<dm-item-wrapper>
+							<dm-verse-title>Modules</dm-verse-title>
+							<dm-verse>
+						<dm-menulink><a href="module-server_admin.html">server/admin</a></dm-menulink>
+						<dm-menulink><a href="module-server_CORE.html">server/CORE</a></dm-menulink>
+						<dm-menulink><a href="module-server_crud.html">server/crud</a></dm-menulink>
+						<dm-menulink><a href="module-server_helpers.html">server/helpers</a></dm-menulink>
+						<dm-menulink><a href="module-server_install.html">server/install</a></dm-menulink>
+						<dm-menulink><a href="module-server_user.html">server/user</a></dm-menulink></dm-verse>
+						</dm-item-wrapper>
+		
+						<dm-item-wrapper>
+							<dm-verse-title>Events</dm-verse-title>
+							<dm-verse>
+						<div class="subhead" style="border-bottom:1px solid {{color.primary.hue2}};color:{{color.primary.hue2}}">CORE</div>
+						<dm-menulink><a href="module-server_CORE.html#.event:io">io</a></dm-menulink>
+						<dm-menulink><a href="module-server_CORE.html#~event:socket">socket</a></dm-menulink></dm-verse>
+						</dm-item-wrapper>
+		
+						<dm-item-wrapper>
+							<dm-verse-title>Namespaces</dm-verse-title>
+							<dm-verse>
+						<div class="subhead" style="border-bottom:1px solid {{color.primary.hue2}};color:{{color.primary.hue2}}">admin</div>
+						<dm-menulink><a href="module-server_admin-settings.html">settings</a></dm-menulink>
+						<div class="subhead" style="border-bottom:1px solid {{color.primary.hue2}};color:{{color.primary.hue2}}">crud</div>
+						<dm-menulink><a href="module-server_crud-userqueries.html">userqueries</a></dm-menulink>
+						<div class="subhead" style="border-bottom:1px solid {{color.primary.hue2}};color:{{color.primary.hue2}}">install</div>
+						<dm-menulink><a href="module-server_install-settings.html">settings</a></dm-menulink>
+						<div class="subhead" style="border-bottom:1px solid {{color.primary.hue2}};color:{{color.primary.hue2}}">user</div>
+						<dm-menulink><a href="module-server_user-settings.html">settings</a></dm-menulink></dm-verse>
+						</dm-item-wrapper>
+		
+					</dm-chapter-deep>
+				</dm-item-wrapper>
+
+				<dm-item-wrapper>
+					<dm-chapter-title>client</dm-chapter-title>
+					<dm-chapter-deep>
+						<dm-item-wrapper>
+							<dm-verse-title>Modules</dm-verse-title>
+							<dm-verse>
+						<dm-menulink><a href="module-client_install.html">client/install</a></dm-menulink>
+						<dm-menulink><a href="module-client_map.html">client/map</a></dm-menulink></dm-verse>
+						</dm-item-wrapper>
+		
+						<dm-item-wrapper>
+							<dm-verse-title>directives</dm-verse-title>
+							<dm-verse>
+						<div class="subhead" style="border-bottom:1px solid {{color.primary.hue2}};color:{{color.primary.hue2}}">install</div>
+						<dm-menulink><a href="module-client_install-dbase.html">dbase</a></dm-menulink></dm-verse>
+						</dm-item-wrapper>
+		
+						<dm-item-wrapper>
+							<dm-verse-title>controllers</dm-verse-title>
+							<dm-verse>
+						<div class="subhead" style="border-bottom:1px solid {{color.primary.hue2}};color:{{color.primary.hue2}}">install</div>
+						<dm-menulink><a href="module-client_install-main.html">main</a></dm-menulink>
+						<div class="subhead" style="border-bottom:1px solid {{color.primary.hue2}};color:{{color.primary.hue2}}">map</div>
+						<dm-menulink><a href="module-client_map-main.html">main</a></dm-menulink>
+						<dm-menulink><a href="module-client_map-test.html">test</a></dm-menulink></dm-verse>
+						</dm-item-wrapper>
+		
+						<dm-item-wrapper>
+							<dm-verse-title>Namespaces</dm-verse-title>
+							<dm-verse>
+						<div class="subhead" style="border-bottom:1px solid {{color.primary.hue2}};color:{{color.primary.hue2}}">map</div>
+						<dm-menulink><a href="module-client_map-main.$scope.html">main.$scope</a></dm-menulink>
+						<dm-menulink><a href="module-client_map-main.$scope.g.html">main.$scope.g</a></dm-menulink></dm-verse>
+						</dm-item-wrapper>
+		
+					</dm-chapter-deep>
+				</dm-item-wrapper>
+<dm-item-wrapper><dm-chapter-title>Global</dm-chapter-title><dm-chapter ><dm-menulink><a href="global.html#isInArray">isInArray</a></dm-menulink><dm-menulink><a href="global.html#ngMaterialMenu">ngMaterialMenu</a></dm-menulink><dm-menulink><a href="global.html#q">q</a></dm-menulink><dm-menulink><a href="global.html#Settings">Settings</a></dm-menulink></dm-chapter></dm-item-wrapper>
+			</dm-sidemen>
+		</md-content>
+	</md-sidenav>
+	<div layout='column' layout-fill>
+		<md-toolbar class="md-whiteframe-4dp site-content-toolbar md-accent" layout-align="center" layout-padding>
+			{{g.pageTitle}}
+		</md-toolbar>
+		<md-content id="main" layout='column' flex>
+			<div class='wrapper' flex layout-margin>
+				<div ng-view class="[autoscroll: true;]"></div>
+			</div>
+			<footer>
+				Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0-dev</a> on Tue Nov 24 2015 12:42:47 GMT+0000 (GMT)
+			</footer>
+		</md-content>
+
+	</div>
+
+</body>
+</html>

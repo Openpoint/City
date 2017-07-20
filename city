@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [[ -n $1 ]] && [[ $1 = 'dev' ]]
+then
+	./node_modules/forever/bin/forever --watch --watchDirectory ./ server.js $2
+elif [[ -n $1 ]] && [[ $1 = 'start' ]]
+then
+	nohup ./node_modules/forever/bin/forever server.js $2 > ./log/session.log 2>&1 &
+	echo 'City has started. 
+Terminal session output is logged to ./log/session.log
+"./city stop" to end
+
+'
+	exit
+elif [[ -n $1 ]] && [[ $1 = 'stop' ]]
+then
+	./node_modules/forever/bin/forever stop server.js
+elif [[ -n $1 ]] && [[ $1 = 'document' ]]
+then
+	rm -r ./static/docs/api
+	./node_modules/jsdoc/jsdoc.js --configure ./static/docs/jsdoc/client.json
+else
+	echo '
+
+"./city start portNumber[optional]" to start production environment
+"./city dev portNumber[optional]" to start development environment
+"./city stop" to stop
+
+'
+fi
+
+

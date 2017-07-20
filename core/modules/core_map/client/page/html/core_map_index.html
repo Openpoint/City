@@ -1,0 +1,32 @@
+	<div ng-controller="main" layout='row' layout-fill>
+		<div ng-controller="sidebar" id='sidebar' style="position:relative;z-index:1">
+			<md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-md')" style="width:450px" layout='column' layout-fill>
+				<h1>Hello {{g.boogaloo}}!</h1>
+
+				<div flex class="scrollme" ng-scrollbar rebuild-on="rebuild:me" style="overflow:hidden" >
+				
+
+					<div layout layout-padding>
+
+						<div class='inner'>
+
+						<a href='/'>Home</a>
+
+		 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus lacinia neque, vestibulum posuere ex convallis nec. Pellentesque nec metus feugiat, tincidunt nibh pretium, consectetur mi. Nam in lacus quis justo lacinia elementum. Nullam ut consectetur quam. Duis et eleifend odio. Etiam consectetur turpis a turpis placerat vehicula. Vestibulum sed lacinia diam. Nulla nulla erat, tincidunt ut felis eu, maximus luctus eros. Aliquam malesuada euismod mattis. Vivamus aliquam pulvinar odio, nec egestas enim lobortis non. Fusce venenatis velit lorem, et maximus ex finibus sed. Praesent ultricies aliquam lacinia. Donec non elit ac libero efficitur lobortis. Aliquam lectus diam, vulputate a semper at, facilisis sed nunc. Etiam fringilla dictum augue, posuere euismod libero tempor fermentum. Curabitur a justo sed elit viverra vehicula ac id sapien.
+
+		Nunc turpis urna, viverra eget porta at, laoreet ut nisl. Praesent aliquet tellus quis pellentesque suscipit. Aliquam vitae lacus id lectus venenatis vehicula ut ut lectus. Nunc lobortis bibendum nunc ac dignissim. Suspendisse vulputate ipsum id massa fermentum, vel eleifend orci iaculis. In ornare sem imperdiet erat consequat rhoncus. Nulla ut tellus semper, elementum nunc vitae, consectetur nisl.
+
+		Morbi tempus tellus ut dolor tempus, non vestibulum ante aliquet. Donec ut auctor odio, ac vulputate ex. Proin dapibus, velit eget fermentum sagittis, lectus ipsum feugiat dolor, vel aliquet libero ipsum eget diam. Phasellus in sapien id libero auctor congue. Sed bibendum congue nisi, in semper risus congue ut. Pellentesque sapien neque, convallis nec quam ut, fermentum porttitor tellus. Nunc vehicula in erat semper rhoncus. Proin arcu sem, molestie eu turpis quis, ultricies semper lectus. Sed eu tristique quam, porta pulvinar lorem. 
+						</div>
+					</div>
+				</div>
+
+			</md-sidenav>
+			<div id='tabs' ng-controller='test' style="width:40px;position:absolute;right:-40px;top:0">
+				<div class='button' ng-repeat="tab in tabsAll.test | orderBy:'order' track by $index">
+					<div class='inner' ng-click='tabsClick(tab.fnc)'>{{tab.val}}</div>
+				</div>
+			</div>
+		</div>
+		<div flex id="map"></div>
+    </div>

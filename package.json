@@ -1,0 +1,34 @@
+{
+  "name": "City",
+  "version": "0.0.1",
+  "description": "Internet GIS for the masses",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Openpoint/city.git"
+  },
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-animate": "^1.6.5",
+    "angular-aria": "^1.6.5",
+    "angular-material": "^1.1.4",
+    "angular-messages": "^1.6.5",
+    "angular-route": "^1.6.5",
+    "angular-ui-bootstrap": "^2.5.0",
+    "bootstrap": "^3.3.7",
+    "compression": "^1.7.0",
+    "express": "^4.15.3",
+    "forever": "^0.15.3",
+    "jquery": "^3.2.1",
+    "ng-scrollbar": "0.0.8",
+    "node-minify": "^2.1.1",
+    "object-pointer": "^1.1.1",
+    "openlayers": "^4.2.0",
+    "pg": "^4.5.6",
+    "socket.io": "^1.7.4"
+  },
+  "devDependencies": {
+    "angular-jsdoc": "^1.2.1",
+    "jsdoc": "git+https://github.com/jsdoc3/jsdoc.git",
+    "minami": "^1.1.1"
+  }
+}

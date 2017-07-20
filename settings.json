@@ -1,0 +1,10 @@
+{
+	"db": {
+		"host": "localhost",
+		"port": "5432",
+		"dbase": "city",
+		"user": "michaeladmin",
+		"pass": "Me1th0b0b"
+	},
+	"nodeport": 8082
+}

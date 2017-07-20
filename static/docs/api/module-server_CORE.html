@@ -1,0 +1,598 @@
+<div class='templateid'>container.tmpl</div>
+<script> 
+
+	pageTitle = 'Module: server/CORE'; 
+	
+</script>
+
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><p>Boots the application and provides server with routes to various page modules.</p></div>
+        
+
+        
+            <div class='templateid'>method.tmpl</div>
+
+
+<md-content layout-padding>
+<div class='inner'>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='templateid'>details.tmpl</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line3">line 3</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</md-content>
+<md-divider></md-divider>
+
+        
+    
+    </div>
+
+    
+
+    
+    
+    
+    
+	
+    
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+		<div class='md-whiteframe-2dp docgroup'>
+			<h3 class="md-title" layout-padding style="background:{{color.accent.hue3}};color:white">Methods</h3>
+
+			
+				<div class='templateid'>method.tmpl</div>
+
+
+<md-content layout-padding>
+<div class='inner'>
+
+    
+
+    <h4 class="name" layout-padding style="background:{{color.accent.hue2}}" id="~redirect"><span class="type-signature">(inner) </span>redirect<span class="signature">(res, url, body, code)</span><span class="type-signature"></span></h4>
+	
+    
+
+
+
+<div class="description">
+    <p>Redirects a page request</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    <div class='templateid'>params.tmpl</div>
+
+
+<table class="params">
+    <thead>
+    <tr style="background:{{color.accent.hue1}}">
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>res</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Pass the response from the request</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The URL to redirect to</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>body</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The body content to send</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>code</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The header code to send with the redirect</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+<div class='templateid'>details.tmpl</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line81">line 81</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</md-content>
+<md-divider></md-divider>
+
+			
+		</div>
+    
+
+    
+		
+
+    
+		<div class='md-whiteframe-2dp docgroup'>
+			<h3 class="md-title" layout-padding style="background:{{color.accent.hue3}};color:white">Events</h3>
+
+			
+				<div class='templateid'>method.tmpl</div>
+
+
+<md-content layout-padding>
+<div class='inner'>
+
+    
+
+    <h4 class="name" layout-padding style="background:{{color.accent.hue2}}" id=".event:io">io</h4>
+	
+    
+
+
+
+<div class="description">
+    <p>The socket connection container made by <a href="http://socket.io/">socket.io</a> including listener.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class='templateid'>details.tmpl</div>
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <div class='templateid'>properties.tmpl</div>
+
+
+<table class="props">
+    <thead>
+    <tr style="background:{{color.accent.hue1}}">
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>connection</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Listens for incoming connection to server</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line144">line 144</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</md-content>
+<md-divider></md-divider>
+
+			
+				<div class='templateid'>method.tmpl</div>
+
+
+<md-content layout-padding>
+<div class='inner'>
+
+    
+
+    <h4 class="name" layout-padding style="background:{{color.accent.hue2}}" id="~event:socket">socket</h4>
+	
+    
+
+
+
+<div class="description">
+    <p>A client connects to the server and a new <a href="http://socket.io/">socket.io</a> socket is created. The socket listens to the clients for named events enumerated in the properties and responds accordingly.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class='templateid'>details.tmpl</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line151">line 151</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</md-content>
+<md-divider></md-divider>
+
+			
+		</div>
+    
+</article>
+
+</section>

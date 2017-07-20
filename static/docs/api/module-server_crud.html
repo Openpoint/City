@@ -1,0 +1,999 @@
+<div class='templateid'>container.tmpl</div>
+<script> 
+
+	pageTitle = 'Module: server/crud'; 
+	
+</script>
+
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><h1>Helper functions to process and route CRUD (Create, Read, Update, Delete) requests to the database using <a href="http://socket.io/">socket.io</a> socket connections.</h1><p>This forms part of &quot;City&quot;'s modular architecture. All sql queries are maintained on the server side and referenced by a JSON library with associated callback functions. A reference to the library is called from the client side and the callback delivers the requested data.</p></div>
+        
+
+        
+            <div class='templateid'>method.tmpl</div>
+
+
+<md-content layout-padding>
+<div class='inner'>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='templateid'>details.tmpl</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="core_server_server_crud.js.html">core/server/server_crud.js</a>, <a href="core_server_server_crud.js.html#line3">line 3</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    <div>examples.tmpl</div>
+
+        <p class="code-caption">Callback functions are defined in the module's "server/module_name_queries.js" file. <br>Functions are called from the client side in the form of:</p>
+    
+    <pre class="prettyprint"><code>	socket.emit('crud_type',{
+		module:'the_module',
+		task:'the_task',
+		tokens:[token1 , token, ....],
+		callback:[
+			{function_name:[param1, param2, ...]},
+			{function_name:[param1, param2, ...]}
+		]
+	});</code></pre>
+
+
+
+</div>
+</md-content>
+<md-divider></md-divider>
+
+        
+    
+    </div>
+
+    
+
+    
+    
+    
+    
+	
+    
+    
+    
+    
+
+     
+
+    
+		<div class='md-whiteframe-2dp docgroup' >
+			<h3 class="md-title" layout-padding style="background:{{color.accent.hue3}};color:white">Namespaces</h3>
+
+			
+				<div class='templateid'>members.tmpl</div>
+
+<md-content layout-padding>
+<div class='inner'>
+<h4  layout-padding style="background:{{color.accent.hue2}}" class="name" id="userqueries"><a href="module-server_crud-userqueries.html">userqueries</a></h4>
+
+
+
+
+<div class="description">
+    <h1>Provides queries for the user module</h1><p>Table columns:
+uuid
+name
+password
+date_added</p>
+</div>
+
+
+
+
+<div class='templateid'>details.tmpl</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="core_modules_core_user_server_core_user_queries.js.html">core/modules/core_user/server/core_user_queries.js</a>, <a href="core_modules_core_user_server_core_user_queries.js.html#line3">line 3</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+</div>
+</md-content>
+
+			
+		</div>
+    
+
+    
+
+    
+		<div class='md-whiteframe-2dp docgroup'>
+			<h3 class="md-title" layout-padding style="background:{{color.accent.hue3}};color:white">Methods</h3>
+
+			
+				<div class='templateid'>method.tmpl</div>
+
+
+<md-content layout-padding>
+<div class='inner'>
+
+    
+
+    <h4 class="name" layout-padding style="background:{{color.accent.hue2}}" id=".create"><span class="type-signature">(static) </span>create<span class="signature">()</span><span class="type-signature"></span></h4>
+	
+    
+
+
+
+<div class="description">
+    <p>CRUD Create</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class='templateid'>details.tmpl</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="core_server_server_crud.js.html">core/server/server_crud.js</a>, <a href="core_server_server_crud.js.html#line128">line 128</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+<h5>Listens to Events:</h5>
+<ul>
+    <li>module:CORE~event:socket</li>
+</ul>
+
+
+
+
+
+
+
+
+
+</div>
+</md-content>
+<md-divider></md-divider>
+
+			
+				<div class='templateid'>method.tmpl</div>
+
+
+<md-content layout-padding>
+<div class='inner'>
+
+    
+
+    <h4 class="name" layout-padding style="background:{{color.accent.hue2}}" id=".delete"><span class="type-signature">(static) </span>delete<span class="signature">()</span><span class="type-signature"></span></h4>
+	
+    
+
+
+
+<div class="description">
+    <p>CRUD Delete</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class='templateid'>details.tmpl</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="core_server_server_crud.js.html">core/server/server_crud.js</a>, <a href="core_server_server_crud.js.html#line163">line 163</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+<h5>Listens to Events:</h5>
+<ul>
+    <li>module:CORE~event:socket</li>
+</ul>
+
+
+
+
+
+
+
+
+
+</div>
+</md-content>
+<md-divider></md-divider>
+
+			
+				<div class='templateid'>method.tmpl</div>
+
+
+<md-content layout-padding>
+<div class='inner'>
+
+    
+
+    <h4 class="name" layout-padding style="background:{{color.accent.hue2}}" id=".read"><span class="type-signature">(static) </span>read<span class="signature">()</span><span class="type-signature"></span></h4>
+	
+    
+
+
+
+<div class="description">
+    <p>CRUD Read</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class='templateid'>details.tmpl</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="core_server_server_crud.js.html">core/server/server_crud.js</a>, <a href="core_server_server_crud.js.html#line141">line 141</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+<h5>Listens to Events:</h5>
+<ul>
+    <li>module:CORE~event:socket</li>
+</ul>
+
+
+
+
+
+
+
+
+
+</div>
+</md-content>
+<md-divider></md-divider>
+
+			
+				<div class='templateid'>method.tmpl</div>
+
+
+<md-content layout-padding>
+<div class='inner'>
+
+    
+
+    <h4 class="name" layout-padding style="background:{{color.accent.hue2}}" id=".update"><span class="type-signature">(static) </span>update<span class="signature">()</span><span class="type-signature"></span></h4>
+	
+    
+
+
+
+<div class="description">
+    <p>CRUD Update</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class='templateid'>details.tmpl</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="core_server_server_crud.js.html">core/server/server_crud.js</a>, <a href="core_server_server_crud.js.html#line152">line 152</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+<h5>Listens to Events:</h5>
+<ul>
+    <li>module:CORE~event:socket</li>
+</ul>
+
+
+
+
+
+
+
+
+
+</div>
+</md-content>
+<md-divider></md-divider>
+
+			
+				<div class='templateid'>method.tmpl</div>
+
+
+<md-content layout-padding>
+<div class='inner'>
+
+    
+
+    <h4 class="name" layout-padding style="background:{{color.accent.hue2}}" id="~process"><span class="type-signature">(inner) </span>process<span class="signature">(crud, cmd, socket)</span><span class="type-signature"></span></h4>
+	
+    
+
+
+
+<div class="description">
+    <p>Processes the CRUD request to the database, gets a result and runs callbacks</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    <div class='templateid'>params.tmpl</div>
+
+
+<table class="params">
+    <thead>
+    <tr style="background:{{color.accent.hue1}}">
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>crud</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the type of crud operation</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cmd</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The index name of the sql query to run</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>socket</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>pass the active socket object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+<div class='templateid'>details.tmpl</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="core_server_server_crud.js.html">core/server/server_crud.js</a>, <a href="core_server_server_crud.js.html#line83">line 83</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</md-content>
+<md-divider></md-divider>
+
+			
+				<div class='templateid'>method.tmpl</div>
+
+
+<md-content layout-padding>
+<div class='inner'>
+
+    
+
+    <h4 class="name" layout-padding style="background:{{color.accent.hue2}}" id="~query"><span class="type-signature">(inner) </span>query<span class="signature">(query, keys)</span><span class="type-signature"> &rarr; {object}</span></h4>
+	
+    
+
+
+
+<div class="description">
+    <p>connect to the database pool (called from <code>module:crud~process</code>, not to be used independantly)</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    <div class='templateid'>params.tmpl</div>
+
+
+<table class="params">
+    <thead>
+    <tr style="background:{{color.accent.hue1}}">
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>query</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the sql query</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>keys</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the replacement tokens for the query</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+<div class='templateid'>details.tmpl</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="core_server_server_crud.js.html">core/server/server_crud.js</a>, <a href="core_server_server_crud.js.html#line56">line 56</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        <div class='templateid'>returns.tmpl</div>
+
+<div class="param-desc">
+    <p>The query result</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+
+    
+
+
+</div>
+</md-content>
+<md-divider></md-divider>
+
+			
+		</div>
+    
+
+    
+		
+
+    
+</article>
+
+</section>

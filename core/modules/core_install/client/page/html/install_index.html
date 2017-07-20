@@ -1,0 +1,78 @@
+	<div ng-controller="main">
+		<div id='header'>
+			<div class='container'>
+				<div class='row'>
+					<div id='logo' class='col-xs-9 col-xs-offset-3'>
+						<img src="/system/images/logo.svg" />
+					</div>
+		
+				</div>
+			</div>
+		</div>
+		<div class='container'>
+			<div class='row vertical-tabs'>
+				<uib-tabset vertical="true">
+					<uib-tab heading="Database" disable='tabs.tab3'>
+						<p class='lead'>City uses a Postgresql (9 and greater) database with PostGIS extension.<br />Please ensure that you have created an empty database and fill in the details below.</p>
+						<form name="dbase"  novalidate >
+							<div class="form-group">
+								<label for="dbase">Database Name:</label> 
+								<input type="text" class='form-control' name="dbase" id="dbase" placeholder="name" ng-model="con.dbase" />
+							</div>
+							<div class="form-group">
+								<label for="username">User Name:</label> 
+								<input type="text" class='form-control' name="username" id="username" placeholder="user" ng-model="con.user" />
+							</div>
+							<div class="form-group">
+								<label for="password">Password:</label> 
+								<input type="password" class='form-control' name="password" id="password" placeholder="password" ng-model="con.pass" />
+							</div>
+							<div class="form-group">
+								<label for="host">Host:</label> 
+								<input type="text" class='form-control' name="host" id="host" placeholder="host" ng-model="con.host" />
+							</div>
+							<div class="form-group">
+								<label for="port">Database Port:</label> 
+								<input type="text" class='form-control' name="port" id="port" placeholder="port" ng-model="con.port" />
+								<input type="text" ng-model="message" dbase ng-hide="true" disabled />
+							</div>
+						</form>	
+						<pre ng-if="message">{{message}}</pre>
+					</uib-tab>
+					<uib-tab heading="Port" disable='dbase.$invalid || tabs.tab3' active='tabs.tab2'>					
+						<p class='lead'>Define the port that the node app will run at (restart required)</p>					
+						<form name="port"  novalidate >
+							<div class="form-group">
+								<label for="portno">Port:</label> 
+								<input type="number" class='form-control' name="portno" id="portno" placeholder="port" ng-model="node.portnum" required />
+							</div>
+							<div class="form-group">
+								<button type="button" class="btn btn-success" ng-if="port.$valid && dbase.$valid" ng-click="save()">Save</button>
+							</div>
+						</form>
+					</uib-tab>					
+					<uib-tab heading="Admin User" disable='tabs.saved' active='tabs.tab3'>
+						<p class='lead'>Create an account for the administrative user</p>					
+						<form name="user"  novalidate >
+							<div class="form-group">
+								<label for="username">User Name:</label> 
+								<input type="text" class='form-control' name="username" id="username" placeholder="name" ng-model="admin.name" required />
+							</div>
+							<div class="form-group">
+								<label for="pass1">Password:</label> 
+								<input type="password" class='form-control' name="pass1" id="pass1" placeholder="password" ng-model="admin.pass1" required />
+							</div>
+							<div class="form-group">
+								<input type="password" class='form-control' name="pass2" id="pass2" placeholder="confirm password" ng-model="admin.pass2" required />
+							</div>
+							<div class="form-group">
+								<div ng-if="user.$valid && admin.pass1!=admin.pass2">Passwords do not match</div>
+								<button type="button" class="btn btn-success" ng-if="user.$valid && admin.pass1===admin.pass2" ng-click="newuser()">Save User</button>
+							</div>
+						</form>
+					</uib-tab>
+
+				</uib-tabset>
+			</div>
+		</div>
+    </div>

@@ -1,0 +1,31 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+		"include":["./"],
+		"exclude":["./node_modules","./static/cache","./static/docs"],
+        "includePattern": ".+\\.js(doc)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+        
+    },
+    "plugins": [
+		"./node_modules/jsdoc/plugins/markdown",
+		"./static/docs/jsdoc/plugins/ngdoc.js"
+    ],
+    "templates": {
+        "cleverLinks": true,
+        "monospaceLinks": true,
+        "default": {
+            "outputSourceFiles": true
+        }
+    },
+	"opts": {
+		"destination": "./static/docs/api",
+		"recurse": true,
+		"verbose": false,
+		"tutorials": "./static/docs/tuts",
+		"readme":"./static/docs/intro.md"
+	}
+
+}

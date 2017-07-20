@@ -1,0 +1,60 @@
+#sidebar .inner{
+	padding-left:8px;
+}
+.ngsb-wrap .ngsb-scrollbar{
+	right:auto;
+	left:0;
+	bottom:50px;
+}
+.ngsb-wrap .ngsb-thumb-container{
+	bottom:8px!important;
+	top:8px!important;		
+}
+/*
+#sidebar,#map {
+	position:absolute;
+	top:0;
+}
+#sidebar{
+	left:0;
+	color:white;
+}
+#map{
+	right:0;
+	background:rgba(255,61,125,.6);
+}
+#sidecontent,#buttons{
+	height:100%;
+	float:left;
+	position:relative;
+}
+#sidecontent{
+	width:85%;
+	background:rgba(255,61,125,1);
+	
+}
+#buttons{
+	width:15%;
+	background:rgba(255,61,125,.6);
+	padding-top:3px;
+}
+#buttons .button{
+box-sizing:border-box;
+padding:1px 4px 1px 0;
+width:100%;
+height:46px;
+position:relative;
+line-height:42px;
+}
+.button .inner{
+background:rgba(255,61,125,.7);
+height:100%;
+cursor:pointer;
+text-align:center;
+border-top-right-radius:3px;
+border-bottom-right-radius:3px;
+}
+.button .inner:hover{
+background:rgba(255,61,125,1);
+}
+*/
